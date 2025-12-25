@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>BoraqApp</display-name>
+
+    <!-- Welcome file configuration -->
+    <welcome-file-list>
+        <welcome-file>acceuil</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet configuration -->
+    <servlet>
+        <servlet-name>BoraqApp</servlet-name>
+        <servlet-class>com.webapp.ControleurBoraq</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BoraqApp</servlet-name>
+        <url-pattern>/acceuil</url-pattern>
+        <url-pattern>/horaires</url-pattern>
+        <url-pattern>/voyageursboraq</url-pattern>
+        <url-pattern>/voyageurshoraires</url-pattern>
+        <url-pattern>/registerAction</url-pattern>
+        <url-pattern>/loginAction</url-pattern>
+        <url-pattern>/ClientInfo</url-pattern>
+        <url-pattern>/processPayment</url-pattern>
+    </servlet-mapping>
+
+    <!-- Encoding filter -->
+    <filter>
+        <filter-name>SetCharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ignore</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>SetCharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

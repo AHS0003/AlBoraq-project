@@ -1,0 +1,418 @@
+:root {
+    --primary-color: #EF233C;
+    --secondary-color: #28a745;
+    --text-color: #4B5563;
+    --border-color: #E5E7EB;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF5FF;
+    color: var(--text-color);
+}
+
+/* Header Styles */
+.header {
+    background-color:#28a745 ;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-icon span {
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    display: block;
+}
+
+.logo {
+    height: 40px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.enterprise-space {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 2rem;
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Container Styles */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative; /* Nécessaire pour que .progress-bar utilise position: absolute */
+
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-label .required {
+    color: var(--secondary-color);
+    margin-left: 4px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: white;
+}
+
+.input-group svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.input-group select,
+.input-group input {
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.input-group select {
+    cursor: pointer;
+}
+
+.comfort-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.comfort-option {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.comfort-option.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.search-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.search-button:hover {
+    opacity: 0.9;
+}
+
+.form-label {
+    color: #EF233C;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+.passenger-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #E9D5FF;
+    border-radius: 16px;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    max-width: 400px;
+}
+
+.passenger-selector svg {
+    width: 24px;
+    height: 24px;
+    color: #EF233C;
+}
+
+.passenger-summary {
+    color: #374151;
+}
+
+.passenger-modal {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 16px;
+    z-index: 1000;
+}
+
+.passenger-modal.active {
+    display: block;
+}
+
+.passenger-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.passenger-info:last-child {
+    margin-bottom: 0;
+}
+
+.passenger-label {
+    color: #28a745;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.passenger-age {
+    color: #6B7280;
+    font-size: 14px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.counter-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #E9D5FF;
+    border-radius: 50%;
+    background: white;
+    color: #EF233C;
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 0;
+}
+
+.counter-btn:hover {
+    background-color: #F3E8FF;
+}
+
+#adultCount, #childCount {
+    min-width: 16px;
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 400px;
+    margin: 20px;
+    position: relative;
+}
+
+/* Correction pour éviter les problèmes d'encodage */
+.counter-btn.minus::before {
+    content: "−";  /* Utilisation du vrai caractère minus */
+}
+
+.counter-btn.plus::before {
+    content: "+";
+}
+
+/* Update date input styles */
+.input-group input[type="date"] {
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    color: #28a745;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+.comfort-options {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background: white;
+    border: 1px solid #E9D5FF;
+    border-radius: 9999px;
+    width: 500px; /* Conteneur plus large */
+    justify-content: space-between; /* Distribution égale des boutons */
+}
+
+.comfort-option {
+    padding: 8px 16px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #EF233C;
+    position: relative;
+    flex: 1; /* Fait que chaque option prend une largeur égale */
+    text-align: center;
+}
+
+/* Cache le radio button par défaut */
+.comfort-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Style quand le radio button est checked */
+.comfort-option input[type="radio"]:checked + .comfort-option,
+.comfort-option:has(input[type="radio"]:checked) {
+    background-color: #EF233C;
+    color: white;
+}
+
+/* Style au hover */
+.comfort-option:hover {
+    background-color: #F3E8FF;
+}
+
+/* Style quand checked + hover */
+.comfort-option input[type="radio"]:checked:hover,
+.comfort-option:has(input[type="radio"]:checked):hover {
+    background-color: #EF233C;
+}
+
+/* Style pour le focus pour l'accessibilité */
+.comfort-option input[type="radio"]:focus-visible + .comfort-option {
+    outline: 2px solid #EF233C;
+    outline-offset: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .comfort-options {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
