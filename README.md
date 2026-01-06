@@ -1,6 +1,6 @@
 # 🚅 AL BORAQ - Application de Réservation de Trains
 
-**Al Boraq** est une application web basée sur l'architecture Jakarta EE, conçue pour la gestion et la réservation de billets de train. Ce projet a été développé dans un cadre académique (Filière LST SDID) pour mettre en pratique les concepts de développement logiciel et d'architecture MVC.
+**Al Boraq** est une application web basée sur l'architecture Jakarta EE, conçue pour la gestion et la réservation de billets de train. Ce projet a été développé dans un cadre académique  pour mettre en pratique les concepts de développement logiciel et d'architecture MVC.
 
 L'application offre une solution complète allant de la recherche d'itinéraires à la génération de billets PDF, en passant par une simulation de paiement sécurisée.
 
@@ -71,3 +71,4 @@ Pour exécuter le projet sur un environnement local :
 ---
 
 © 2025 Projet Al Boraq - Tous droits réservés.
+
