@@ -1,7 +1,7 @@
 package Dao;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Connection;
 
 public class dbconnexion  {
     private static Connection connexion;
@@ -9,13 +9,11 @@ public class dbconnexion  {
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
-            connexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/Gestion_Reservation","root","");
+            connexion=DriverManager.getConnection("jdbc:mysql://alboraq-db:3306/gestion_reservation","alboraq","alboraq123");
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
